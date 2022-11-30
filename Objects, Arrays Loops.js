@@ -183,4 +183,4 @@ for(i=0;i<carsForSale.length;i++)
 {
     console.log(carsForSale[i]);
 }
- */
+*/

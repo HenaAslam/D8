@@ -4,20 +4,19 @@
  Write a piece of code for reverting an array.
  es:
  [1, 3, 5] ==> [5, 3, 1]
-*/
 
-/*let trialArray=[1,3,5];
-for(let i=0;i<trialArray.length;i++)
-{
-    let j=trialArray.length;
-    let newArray[i]=trialArray[j-1];
-    j--;
-}
-console.log(newArray);
-
+/*
 let trialArray=[1,3,5];
 let newArray=trialArray.reverse();
 console.log(newArray);
+
+let array=[10,3,7,5,1];
+let revArray=[];
+for(let i=array.length-1;i>=0;i--)
+{
+    revArray.push(array[i]);
+}
+console.log("The reversed array is: ", revArray);
 */
 
 /* EXTRA 2
@@ -25,20 +24,16 @@ console.log(newArray);
 */
 
 /*
-let minArray=[2,15,10,9];
-let minValue;
-for(let i=0;i<minArray.length;i++)
+let maxArray=[3,7,4,9,12,2,36,1];
+let maxValue=maxArray[0];
+for(let i=0;i<maxArray.length-1;i++)
 {
-    for (let j=1;j<minArray.length;j++)
-    {
-        if(minArray[i]>minArray[j])
-        {
-           minValue=minArray[i] ;
-        }
-    }
+   if(maxArray[i]>maxValue)
+   {
+    maxValue=maxArray[i];
+   }
 }
-console.log("The smallest number is",minValue);
-
+console.log("The largest number is",maxValue);
 
 */
 
@@ -46,19 +41,18 @@ console.log("The smallest number is",minValue);
  Write a piece of code for getting the minimum numerical value from an array.
 */
 
-/*let maxArray=[2,15,10,9];
-let maxValue;
-for(let i=0;i<maxArray.length;i++)
+/*
+let minArray=[2,15,1,10,9];
+let minValue=minArray[0];
+for(let i=0;i<minArray.length-1;i++)
 {
-    for (let j=1;j<maxArray.length;j++)
-    {
-        if(maxArray[i]>maxArray[j])
+   
+        if(minArray[i]<minValue)
         {
-           maxValue=maxArray[i] ;
+           minValue=minArray[i] ;
         }
-    }
 }
-console.log("The largest number is",maxValue);
+console.log("The smallest number is",minValue);
   */
 
 /* EXTRA 4
@@ -79,17 +73,18 @@ for(let i=0;i<evenArray.length; i++)
  Write a piece of code for deleting only even entries from an array.
 */
 
-/* /*evenArray=[3,5,4,6,9];
-let oddArray;
+/* 
+let evnArray=[3,5,4,6,9];
+let oddArray=[];
 let j=0;
-for(let i=0;i<evenArray.length; i++)
+for(let i=0;i<evnArray.length; i++)
 {
- if(evenArray[i]%2==1){
-    oddArray[j]=evenArray[i]
-    j++;
+ if(evnArray[i]%2==1){
+    oddArray.push(evnArray[i]);
+
  }
 }
-console.log(oddArray);
+console.log("The array after deleting even numbers:",oddArray);
 */
 
 /* EXTRA 6
@@ -111,14 +106,16 @@ console.log(newString); */
  Write a piece of code for increasing all the numerical values in a array by 1.
 */
 
-/* /*let incArray=[1,2,3,4];
-let resArray;
+/*
+let incArray=[1,2,3,4];
+let resArray=[];
 for(let i=0;i<incArray.length;i++)
 {
 
-resArray[i]=incArray[i]+1;
+resArray.push(incArray[i]+1);
 }
-console.log(resArray);
+console.log("Incremented array",resArray);
+
 */
   
 
@@ -130,14 +127,12 @@ console.log(resArray);
 
 /*
 let repArray=["strive", "is", "great"];
-let lenArray;
-let j=0;
+let lenArray=[];
 for(i=0;i<repArray.length;i++)
 {
-lenArray[j]=repArray[i].length;
-j++;
+lenArray.push(repArray[i].length);
+
 }
 
-console.log(lenArray);
-
+console.log("The length of items are",lenArray);
 */
